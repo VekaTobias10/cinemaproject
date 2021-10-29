@@ -13,3 +13,12 @@ body {
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Limelight', cursive;
+  src: url(https://fonts.googleapis.com/css2?family=Limelight&display=swap);
+}
+
+@font-face {
+  font-family:'Nunito', sans-serif;
+  src: url(https://fonts.googleapis.com/css2?family=Limelight&family=Nunito:ital,wght@0,800;0,900;1,800&display=swap);
+}

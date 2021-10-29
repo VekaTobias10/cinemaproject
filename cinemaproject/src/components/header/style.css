@@ -9,3 +9,11 @@
     background-size: cover;
     background-position: top;
   }
+
+.title_header{
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    text-align: center;
+}
