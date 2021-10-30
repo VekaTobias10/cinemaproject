@@ -1,20 +1,2 @@
 
-.card_box_container{
-    width: 80%;
-    display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-    padding: 20px;
-}
-
-.card_movie {
-  width: 250px;
-  height: 200px;
-  padding: 30px;
-  margin: 20px auto;
-  background-color: rgba(29, 24, 24, 0.8);
-  color: white;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  display: inline-block;
-}
 
