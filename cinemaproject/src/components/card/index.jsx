@@ -9,7 +9,7 @@ export default function Card() {
     method: "GET",
     headers: {
       "Content-type": "application/json",
-    //   Authorization: `Bearer ${token} }`,
+      Authorization: "Bearer CfXrfk889Q7CB6IAOuH6",
     },
   };
 
