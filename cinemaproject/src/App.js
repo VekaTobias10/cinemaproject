@@ -1,13 +1,34 @@
 import React from "react";
-import { Movies } from "./pages/Movies";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import { Movies} from "./pages/Movies";
+import { Characters } from "./pages/Characters";
+import { Navbar } from "./components/Navbar";
 
-function App() {
+export default function App() {
 
   return (
+    <Router>
+      <Navbar />
+        <Switch>
+          <Route path="/characters">
+            <Characters />
+          </Route>
+          <Route path="/movies">
+            <Movies />
+          </Route>
+          <Route path="/">
+            <Movies />
+          </Route>
+        </Switch>
+    </Router>
 
-    <Movies />
+
 
   );
-}
+};
 
-export default App;
+
