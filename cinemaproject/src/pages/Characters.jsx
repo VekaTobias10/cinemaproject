@@ -3,9 +3,13 @@ import "./Characters.css";
 import { appConfig } from "../appConfig";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import Typography from '@mui/material/Typography';
 
 
 export const  Characters = () => {
+
 
   const [characters, setCharacters] = useState([]);
   const { BEARER_TOKEN, BASE_URL } = appConfig;
@@ -35,23 +39,30 @@ export const  Characters = () => {
       <h1 className='title_header_character'>Characters</h1>
       <div className="card_box_container">
         <ul className="list_block">
-          {characters.map((c, character) => (
+          {characters && characters.map((c, character) => (
             <li key={character}>
-              <div className="card_character">
-                <p className="c_name">
-                  <span className="subtitle">Name:</span> {c.name}
-                </p>
-                <p className="c_gender">
-                  <span className="subtitle">Gender: </span> {c.gender}
-                </p>
-                <p className="c_hair">
-                  <span className="subtitle">Hair: </span> {c.hair}
-                </p>
-                <p className="c_race">
-                  <span className="subtitle">Race: </span> {c.race}
-                </p>
+              <Card className="card_character">
+
+               <CardContent>
+
+                   <Typography className="c_name" component="p">
+                  <span className="subtitle_character">Name:</span>{c.name}
+                </Typography>
+                <Typography className="c_spouse" component="p">
+                  <span className="subtitle_character">Spouse: </span> {c.spouse}
+                </Typography>
+                <Typography  className="c_gender" component="p">
+                  <span className="subtitle_character">Gender: </span> {c.gender}
+                </Typography>
+                <Typography className="c_hair" component="p">
+                  <span className="subtitle_character">Hair: </span> {c.hair}
+                </Typography>
+                <Typography className="c_race" component="p">
+                  <span className="subtitle_character">Race: </span> {c.race}
+                </Typography>
+                </CardContent>
                 
-              </div>
+              </Card>
             </li>
           ))}
         </ul>
