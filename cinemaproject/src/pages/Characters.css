@@ -4,7 +4,7 @@
     font-family: "Nunito", sans-serif;
     font-weight: 900;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 80px;
   }
   
 
@@ -26,14 +26,13 @@
   
   .card_character {
     width: 235px;
-    height: 180px;
-    padding: 30px;
+    height: 165px;
     margin: 20px 10px;
-    background-color: rgba(29, 24, 24, 0.8);
     color: white;
-    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); */
     display: inline-block;
-    border-radius: 80px;
 
   }
   
+  .subtitle_character{
+   font-weight: 700;
+  }
