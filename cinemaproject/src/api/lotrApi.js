@@ -30,4 +30,18 @@ export const lotrApi = {
       .then((r) => r.json())
       .then((m) => m.docs);
   },
-};
+
+  fetchQuotes: async () => {
+    const options = {
+      method: "GET",
+      headers: {
+        "Content-type": "application/json",
+        Authorization: `Bearer ${BEARER_TOKEN}`,
+      },
+    };
+
+    return fetch(`${BASE_URL}/character/5cd99d4bde30eff6ebccfc07/quote`, options)
+    .then((r) => r.json())
+    .then((q) => q.docs);
+}
+}

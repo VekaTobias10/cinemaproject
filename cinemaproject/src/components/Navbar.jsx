@@ -24,6 +24,11 @@ export const Navbar = () => {
               Characters
             </Link>
           </li>
+          <li className="nav_item">
+            <Link className="link_nav" to="/Quotes">
+              Quotes
+            </Link>
+          </li>
         </ul>
       </nav>
     </div>

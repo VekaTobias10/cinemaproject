@@ -4,6 +4,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import { Quotes } from "./pages/Quotes";
 import { Movies} from "./pages/Movies";
 import { Characters } from "./pages/Characters";
 import { Navbar } from "./components/Navbar";
@@ -14,6 +15,9 @@ export default function App() {
     <Router>
       <Navbar />
         <Switch>
+          <Route path="/quotes">
+            <Quotes />
+          </Route>
           <Route path="/characters">
             <Characters />
           </Route>

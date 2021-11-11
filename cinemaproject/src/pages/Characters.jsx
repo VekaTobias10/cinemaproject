@@ -5,6 +5,9 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { lotrApi } from "../api/lotrApi";
+import Grid from '@mui/material/Grid';
+import FaceIcon from '@mui/icons-material/Face';
+
 
 export const Characters = () => {
 
@@ -26,12 +29,17 @@ export const Characters = () => {
           {characters &&
             characters.map((c, character) => (
               <li key={character}>
+                <Grid container spacing={2}>
+                  <Grid item xs={12} sm container>
                 <Card className="card_character">
                   <CardContent>
+                    <Grid item xs={12}>
+                    <FaceIcon></FaceIcon>
                     <Typography className="c_name" component="p">
-                      <span className="subtitle_character">Name:</span>
+                      <span className="subtitle_character">Character:</span>
                       {c.name}
                     </Typography>
+                    </Grid>
                     <Typography className="c_spouse" component="p">
                       <span className="subtitle_character">Spouse: </span>{" "}
                       {c.spouse}
@@ -50,6 +58,8 @@ export const Characters = () => {
                     </Typography>
                   </CardContent>
                 </Card>
+                </Grid>
+                </Grid>
               </li>
             ))}
         </ul>
