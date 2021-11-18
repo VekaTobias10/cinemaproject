@@ -1,37 +1,45 @@
 .title_header_character {
-    text-transform: uppercase;
-    color: rgb(29, 27, 27);
-    font-family: "Nunito", sans-serif;
-    font-weight: 900;
-    text-align: center;
-    padding-top: 80px;
-  }
+  text-transform: uppercase;
+  color: rgb(29, 27, 27);
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  text-align: center;
+  padding-top: 80px;
+}
 
 .card_box_container {
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: auto;
-    padding: 20px;
-  }
-  
-  .list_block {
-    list-style-type: none;
-    flex-direction: row;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .card_character {
-    width: 235px;
-    height: 165px;
-    margin: 20px 10px;
-    color: white;
-    display: inline-block;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+  padding: 20px;
+}
 
-  }
-  
-  .subtitle_character{
-   font-weight: 700;
-  }
+.list_block {
+  list-style-type: none;
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filters {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.filters > div {
+  width: 100%;
+}
+
+.card_character {
+  width: 235px;
+  height: 200px;
+  margin: 20px 10px;
+  color: white;
+  display: inline-block;
+}
+
+.subtitle_character {
+  font-weight: 700;
+}
