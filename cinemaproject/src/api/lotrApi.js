@@ -31,7 +31,7 @@ export const lotrApi = {
       .then((m) => m.docs);
   },
 
-  fetchQuotes: async () => {
+  fetchQuotes: async (characterId) => {
     const options = {
       method: "GET",
       headers: {
@@ -40,7 +40,7 @@ export const lotrApi = {
       },
     };
 
-    return fetch(`${BASE_URL}/character/5cd99d4bde30eff6ebccfc07/quote`, options)
+    return fetch(`${BASE_URL}/character/${characterId}/quote`, options)
     .then((r) => r.json())
     .then((q) => q.docs);
 }

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useParams } from "react-router";
 import "./Quotes.css";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -11,12 +12,13 @@ import { lotrApi } from "../api/lotrApi";
 export const Quotes = () => {
   const { fetchQuotes } = lotrApi;
   const [quotes, setQuotes] = useState([]);
+  const { characterId } = useParams();
 
   useEffect(() => {
-    fetchQuotes()
+    fetchQuotes(characterId)
       .then(setQuotes)
       .catch(() => toast.error("Error del fetch"));
-  }, [fetchQuotes, setQuotes]);
+  }, [fetchQuotes, setQuotes, characterId]);
 
   return (
     <div className="main_container">
@@ -29,7 +31,8 @@ export const Quotes = () => {
                 <Card className="card_quote">
                   <CardContent>
                     <Typography className="quote" component="p">
-                      <span className="subtitle_quote">Dialoge:</span> {q.dialog}
+                      <span className="subtitle_quote">Dialoge:</span>{" "}
+                      {q.dialog}
                     </Typography>
                   </CardContent>
                 </Card>

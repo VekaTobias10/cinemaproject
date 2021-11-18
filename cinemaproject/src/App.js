@@ -15,7 +15,7 @@ export default function App() {
     <Router>
       <Navbar />
         <Switch>
-          <Route path="/quotes">
+          <Route path="/quotes/:characterId">
             <Quotes />
           </Route>
           <Route path="/characters">

@@ -29,11 +29,11 @@
   }
   
   .card_quote {
-    width: 350px;
+    width: 320px;
     height: 160px;
     margin: 20px 10px;
     color: black;
-    padding: 20px;
+    padding: 10px;
     border-radius: 80px;
   }
   
