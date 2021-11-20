@@ -12,8 +12,9 @@ export const lotrApi = {
       },
     };
 
+    const nameFilter = name && `&name=/${name}/i`;
     return fetch(
-      `${BASE_URL}/character?limit=20&page=${pagination.page}&name=${pagination.name}`,
+      `${BASE_URL}/character?page=${pagination.page}&limit=10${nameFilter}`,
       options
     )
       .then((r) => r.json())
