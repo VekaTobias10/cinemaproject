@@ -7,30 +7,29 @@ import { Pagination, TextField } from '@mui/material';
 import { useDebounce } from 'react-use';
 
 export const Characters = () => {
+  const characterPageSize = 12;
   const { fetchCharacters } = lotrApi;
   const [name, setName] = useState('');
   const [debouncedName, setDebouncedName] = useState('');
   const [characters, setCharacters] = useState([]);
-  const [pagination, setPagination] = useState({
-    page: 0,
-    limit: 20,
-    pages: 0,
-  });
+  const [page, setPage] = useState(1);
+  const [pages, setPages] = useState(0);
   useDebounce(() => setDebouncedName(name), 2000, [name]);
   useEffect(() => {
-    fetchCharacters(debouncedName, { page: 0, limit: 20, pages: 0 })
+    fetchCharacters(debouncedName, {
+      page: page,
+      limit: characterPageSize,
+      pages: pages,
+    })
       .then((characterInfo) => {
         setCharacters(characterInfo.characters);
-        setPagination(characterInfo.pagination);
+        setPages(characterInfo.pagination.pages);
       })
       .catch(() => toast.error('Error del fetch'));
-  }, [fetchCharacters, setCharacters, setPagination, debouncedName]);
+  }, [fetchCharacters, setCharacters, debouncedName, page, pages]);
 
   const handleChange = (event, page) => {
-    setPagination({
-      ...pagination,
-      page,
-    });
+    setPage(page);
   };
   return (
     <div className='main_container_character'>
@@ -55,8 +54,8 @@ export const Characters = () => {
             ))}
         </ul>
         <Pagination
-          count={pagination.limit}
-          page={pagination.page}
+          count={characterPageSize}
+          page={page}
           onChange={handleChange}
         />
       </div>
