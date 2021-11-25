@@ -1,6 +1,6 @@
 .title_header_character {
   text-transform: uppercase;
-  color: rgb(29, 27, 27);
+  color: #FFD778;
   font-family: 'Nunito', sans-serif;
   font-weight: 900;
   text-align: center;
@@ -23,6 +23,10 @@
   flex-wrap: wrap;
 }
 
+.linkToQuotes {
+  text-decoration: none;
+}
+
 .filters {
   margin: 0 auto;
   width: 80%;
@@ -32,14 +36,3 @@
   width: 100%;
 }
 
-.card_character {
-  width: 235px;
-  height: 200px;
-  margin: 20px 10px;
-  color: white;
-  display: inline-block;
-}
-
-.subtitle_character {
-  font-weight: 700;
-}
