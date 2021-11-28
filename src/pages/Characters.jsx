@@ -49,7 +49,7 @@ export const Characters = () => {
         <div className="filters">
           <TextField
             id="outlined-basic"
-            label="Name"
+            label="Filter by name"
             variant="outlined"
             onChange={(ev) => setName(ev.target.value)}
           />
@@ -64,7 +64,7 @@ export const Characters = () => {
               </li>
             ))}
         </ul>
-        <Pagination count={pages} page={page} onChange={handleChange} />
+        <Pagination count={pages} color="secondary" page={page} onChange={handleChange} className='pagination_style' />
       </div>
       <ToastContainer />
     </div>
