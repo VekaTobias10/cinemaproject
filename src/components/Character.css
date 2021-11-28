@@ -1,10 +1,10 @@
-.root {
+/* .root {
   width: 300px;
   height: 200px;
   margin: 20px 10px;
   display: inline-block;
   
-}
+} */
 
 .subtitle_character {
   font-weight: 700;
@@ -12,10 +12,6 @@
 
 .c_name {
   text-transform: uppercase;
-  font-weight: bolder;
   font-size: 20px;
 }
-/* 
-.c_name {
-  display: flex;
-} */
+
