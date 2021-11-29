@@ -6,6 +6,27 @@ import { CharacterCard } from "../components/Character";
 import { Pagination, TextField } from "@mui/material";
 import { useDebounce } from "react-use";
 import { usePagination } from '../hooks/usePagination';
+import { styled } from '@mui/material/styles';
+
+const CssTextField = styled(TextField)({
+  '& label.Mui-focused': {
+    color: '#FFD778',
+  },
+  '& .MuiInput-underline:after': {
+      borderBottomColor: '#FFD778',
+  },
+  '& .MuiOutlinedInput-root': {
+    '& fieldset': {
+      borderColor: '#E1F5F7',
+    },
+    '&:hover fieldset': {
+      borderColor: '#eb9d86',
+    },
+    '&.Mui-focused fieldset': {
+      borderColor: '#FFD778',
+    },
+  },
+});
 
 export const Characters = () => {
   const characterPageSize = 12;
@@ -47,9 +68,9 @@ export const Characters = () => {
       <h1 className="title_header_character">Characters</h1>
       <div className="card_box_container">
         <div className="filters">
-          <TextField
+          <CssTextField
             id="outlined-basic"
-            label="Filter by name"
+            label="Filter by name..."
             variant="outlined"
             onChange={(ev) => setName(ev.target.value)}
           />
