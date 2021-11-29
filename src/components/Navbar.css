@@ -14,6 +14,7 @@
   justify-content: center;
   align-items: center;
   z-index: 0;
+  border-bottom: #FFD778 3px solid;
 }
 
 .nav_item {

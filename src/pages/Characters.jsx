@@ -20,7 +20,7 @@ const CssTextField = styled(TextField)({
       borderColor: '#E1F5F7',
     },
     '&:hover fieldset': {
-      borderColor: '#eb9d86',
+      borderColor: '#FFD778',
     },
     '&.Mui-focused fieldset': {
       borderColor: '#FFD778',
