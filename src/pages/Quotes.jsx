@@ -22,7 +22,7 @@ export const Quotes = () => {
 
   return (
     <div className="main_container">
-      <h1 className="title_header">Quotes</h1>
+      <h1 className="title_header_quotes">Quotes</h1>
       <div className="card_box_container">
         <ul className="list_block">
           {quotes &&
